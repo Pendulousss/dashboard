@@ -42,7 +42,102 @@ svg {
     grid-row: 1 / 2;
     background-color: white;
     box-shadow: 0 0 8px 4px;
+    svg {
+            height: 24px;
+            width: 24px;
+            margin: 0 16px;
+        }
+    .headerline1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50%;
+        padding: 0 24px;
+        gap: 36px;
+        .searchbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+        input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            border-radius: 16px;
+            flex: 1 0 700px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+        .others {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        
+        img {
+            border-radius: 100%;
+            height: 48px;
+            width: 48px;
+        }
+        
+    }
+    }
+    .headerline2 {
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 24px;
+        .greet {
+            margin: 0 0;
+            font-size: large;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+             img {
+                height: 72px;
+                width: 72px;
+                border-radius: 100%;
+                margin: 0 16px;
+            }
+            p {
+                font-weight: 600;
+                font-size: medium;
+                color: gray;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0;
+            }
+         }
+         .headerbuttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            button {
+                border: none;
+                outline: none;
+                padding: 8px 16px;
+                border-radius: 16px;
+                background-color: var(--theme-color);
+                color: white;
+                font-size: medium;
+                font-weight: 600;
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(100, 130, 160);
+                }
+            }
+         }
+    }
 }
+
 
 .main {
     grid-column: 2 / 3;
@@ -138,10 +233,17 @@ svg {
                 border-radius: 8px;
                 cursor: pointer;
             }
+        img {
+            height: 54px;
+            width: 54px;
+            border-radius: 100%;
+            margin: 0 16px;
+        }
     }
 }
 
 .main .announcements {
+    margin-top: 16px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;  
     display: grid;
@@ -214,13 +316,17 @@ svg {
     }
     .cards {
         padding: 0;
-        margin: 0;
+        margin: 0 0 24px 0 ;
         grid-column: 1/2;
         grid-row: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
         .project {
+            min-width: 300px;
+            max-height: 300px;
+            max-width: 500px;
+
             box-sizing: border-box;
             background-color: white;
             border: 1px solid #eee;
